@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/font_style.css">
+    <link rel="stylesheet" href="../css/new.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>stat roller</title>
+</head>
+<body>
+    <!--menu -->
+    <input type="checkbox" id="click">
+    <label for="click" class="lbl">&#9776;</label>
+    <nav class="menu1">
+        <ul>
+            <li><a href="../index.html">main<span class="Icon-veryhome"></span></a></li>
+            <li><a href="sub-site_1.html">about</a> </li>
+            <li><a href="sub-site_2.html">sign up</a></li>
+            <li><a href="sub-site_3.html">classes</a></li>
+            <li><a href="sub-site_4.html">stat roller</a></li>
+        </ul>
+    </nav> 
+    <section class="centered">
+    <!--roller made with chatgpt-4-->
+        <h1>D&D Stat Roller</h1>
+        <button onclick="rollAttributes()" class="done">Roll Attributes</button>
+        <ul id="attributes" class="done"></ul>
+        <script>
+            function rollDie() {
+                return Math.floor(Math.random() * 6) + 1;
+            }
+            function rollAttribute() {
+                let rolls = [rollDie(), rollDie(), rollDie(), rollDie()];
+                rolls.sort((a, b) => a - b);
+                rolls.shift(); 
+                return rolls.reduce((a, b) => a + b);
+            }
+            function rollAttributes() {
+                const attributes = document.getElementById("attributes");
+                attributes.innerHTML = "";
+                for (let i = 0; i < 6; i++) {
+                    const li = document.createElement("li");
+                    li.textContent = "stat " + (i + 1) + ": " + rollAttribute();
+                    attributes.appendChild(li);
+                }
+            }
+        </script>
+    <p>How Attribute Rolling Works <br>This tool uses the classic Dungeons & Dragons method for generating character ability scores roll four six-sided dice drop the lowest roll and add the highest three together. This gives one attribute score. The process is repeated six times to create values for Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. <br>This method is popular because it usually results in above-average characters while still introducing randomness and variation. It strikes a good balance between fairness and fun. <br>Other common methods: <br><br>Standard Array is the simplest it consists of Fixed values they are 15, 14, 13, 12, 10, 8 they are then assigned by the player to each stat. <br>Point Buy: Players spend a set number of points to "buy" stats within limits, ensuring balanced characters. <br>1d12+6: Roll one twelve sided dice and add 6 to the result per stat, no re-rolls or adjustments—more random and often results stronger characters. <br>You can try this roller as many times as you like until you find a set of scores that inspires your next hero!
+        </p>
+<input type="checkbox"id="cb_click">
+<label for="cb_click" class="cb_lbl"><span class="Icon-verybubble"></span></label>
+<div class="chatbox">
+    <form method="post"class="chat" action="#">
+        <label class="lines">name</label>
+        <input class="lines" type="text">
+        <label class="lines">message</label>
+        <input class="lines skilabod_rammi" type="text">
+        <input class="done" type="submit" required>
+    </form>
+</div>
+</section>
+<section class="sectvar1">
+    <div class="subsect">
+        <!--information-->
+        <li>Name:Jóhann Einar Árnason</li>
+        <li>Phone:7767863</li>
+        <li>Mail:johannar23@tskoli.is</li>
+        <li>Vefhönnun:Tölvubraut-Hönnun Tækniskólans</li>
+    </div>
+</section>
+</body>
+</html>

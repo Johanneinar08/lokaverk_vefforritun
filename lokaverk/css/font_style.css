@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'fonts';
+  src:  url('../fonts/fonts.eot?2lhwxk');
+  src:  url('../fonts/fonts.eot?2lhwxk#iefix') format('embedded-opentype'),
+    url('../fonts/fonts.ttf?2lhwxk') format('truetype'),
+    url('../fonts/fonts.woff?2lhwxk') format('woff'),
+    url('../fonts/fonts.svg?2lhwxk#fonts') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="Icon-very"], [class*=" Icon-very"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fonts' !important;
+  speak-as: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Icon-veryhome:before {
+  content: "\e900";
+}
+.Icon-verybubble:before {
+  content: "\e96b";
+}
+.Icon-verygithub:before {
+  content: "\eab0";
+}
+.Icon-verysvg:before {
+  content: "\eae9";
+}
